@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom premium styling utilities */
+body {
+  font-family: var(--font-sans);
+  background-color: #fcfcfd;
+  color: #0f172a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #0B0C10;
+  color: #E6EDF3;
+}
+
+/* Custom premium styling utilities conforming to Elegant Dark */
+.glass-card {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(48, 54, 61, 1);
+  border-radius: 12px;
+}
+
+.ai-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Override standard slate & indigo colors in dark mode for Elegant Dark look */
+.dark {
+  --color-slate-50: #161B22;
+  --color-slate-100: #21262D;
+  --color-slate-200: #30363D;
+  --color-slate-300: #484F58;
+  --color-slate-400: #8B949E;
+  --color-slate-500: #8B949E;
+  --color-slate-600: #484F58;
+  --color-slate-700: #30363D;
+  --color-slate-800: #30363D;
+  --color-slate-850: #21262D;
+  --color-slate-900: #161B22;
+  --color-slate-950: #0B0C10;
+
+  --color-indigo-50: rgba(124, 58, 237, 0.05);
+  --color-indigo-100: rgba(124, 58, 237, 0.1);
+  --color-indigo-200: rgba(124, 58, 237, 0.2);
+  --color-indigo-300: #C084FC;
+  --color-indigo-400: #A78BFA;
+  --color-indigo-500: #8B5CF6;
+  --color-indigo-600: #7C3AED;
+  --color-indigo-700: #6D28D9;
+}
+
+/* Elegant scrollbar matching Elegant Dark */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363D;
+  border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #30363D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #484F58;
+}
+
+/* Pulse effects for parsing analysis */
+@keyframes scanning {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanning-line {
+  animation: scanning 2s linear infinite;
+}
